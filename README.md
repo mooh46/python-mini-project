@@ -49,4 +49,3 @@ Project1/
 ├── manage.py
 └── README.md
 ```
-For more information about this project structure and requirements, visit: https://roadmap.sh/projects/unit-converter

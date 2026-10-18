@@ -219,3 +219,7 @@ __marimo__/
 
 #idesettings
 .idea
+.venv/
+*.pyc
+
+

@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block body %}
+<form action="{{ action_url }}" method="post">
+    {% csrf_token %}
+    {{ form.article_title.label }}
+    {{ form.article_title }}
+    <br>
+    {{ form.publishing_date.label }}
+    <br>
+    {{ form.publishing_date}}
+    <br>
+    {{ form.content.label }}
+    <br>
+    {{ form.content }}
+    <br>
+    <input type="submit" value="publish">
+
+    <button><a href="{% url 'blogapp:load' %}">Articles</a></button>
+
+</form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% block body %}
+{% for artc in artcl %}
+    <h2>{{ artc.title }}</h2>
+
+    <p>{{ artc.date }}</p>
+
+    <p>{{ artc.content }}</p>
+    <button><a href="{% url 'blogapp:edit' name=artc.filename %}">Edit</a></button>
+    <br>
+    <button><a href="{% url 'blogapp:delete' name=artc.filename %}">Delete</a></button>
+{% endfor %}
+    <br>
+    <div class="top-bar">
+    <button><a href="{% url 'blogapp:logout' %}">Logout</a></button>
+    </div>
+
+
+    <button><a href="{% url 'blogapp:new' %}">Add articles</a></button>
+{% endblock %}

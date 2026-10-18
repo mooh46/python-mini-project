@@ -1,0 +1,16 @@
+{% extends  "main.html" %}
+{% block body %}
+    {% for article in artcl %}
+        <a href="{% url 'blogapp:article' name=article.filename %}">
+            <ol>
+                <li>{{ article.title }}  : {{ article.date }} </li>
+            </ol>
+
+        </a>
+        <br>
+    {% endfor %}
+    <div class="top-bar">
+    <button><a href="{% url 'blogapp:login' %}">LOGIN</a></button>
+    </div>
+
+{% endblock %}
